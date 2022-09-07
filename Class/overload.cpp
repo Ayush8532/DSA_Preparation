@@ -6,9 +6,6 @@ class Hero{
     int age;
     int roll;
     int year;
-    Hero(){
-        cout<<"Default constructor"<<endl;   //Default Constructor
-    }
     Hero(int a,int r,int y)                 //Parameterised Constructor
     {
         cout<<"Parameterised "<<endl;
@@ -23,10 +20,6 @@ class Hero{
         roll=a.roll;
         year=a.year;
     }
-    //destructor--
-    ~Hero(){
-        cout<<"Destructor called"<<endl;
-    }
     void getHero()
     {
         cout<<age<<" "<<roll<<" "<<year;
@@ -34,17 +27,10 @@ class Hero{
 };
 int main()
 {
-    //default constructor---
-    Hero ramesh;
-
-    //dynamically-- default constructor
-    Hero *h=new Hero;
-
-    //parameterised constructor--
     Hero a(50,1234,2000);
+    //a.getHero();
+    Hero b(90,123,3533);
 
-    //copy constructor--
-    Hero b(a);
-   // a.getHero();
+
     return 0;
 }
